@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Kantine Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .menu-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script>
+        function adjustIngredients(item) {
+            window.location.href = 'ingredienten.html?item=' + encodeURIComponent(item);
+        }
+
+        function addToCart(item) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ product: item, ingredients: [] });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(item + " is toegevoegd aan je winkelmand!");
+        }
+
+        function goToCart() {
+            window.location.href = 'winkelmand.html';
+        }
+    </script>
+</head>
+<body>
+    <button onclick="window.location.href='winkelmand.html'">Ga naar winkelmand</button>
+
+    <div class="menu-container">
+        <h1>School Kantine Menu</h1>
+
+        <h2>Eten</h2>
+        <ul>
+            <li>Broodje Hete Kip - €4,00 <button onclick="adjustIngredients('Broodje Hete Kip')">Pas aan</button> <button onclick="addToCart('Broodje Hete Kip')">In winkelmand</button></li>
+            <li>Panini BBQ Kip - €3,50 <button onclick="adjustIngredients('Panini BBQ Kip')">Pas aan</button> <button onclick="addToCart('Panini BBQ Kip')">In winkelmand</button></li>
+            <li>Tomatensoep - €3,00 <button onclick="adjustIngredients('Tomatensoep')">Pas aan</button> <button onclick="addToCart('Tomatensoep')">In winkelmand</button></li>
+        </ul>
+
+        <h2>Drankjes</h2>
+        <ul>
+            <li>Cola - €2,00 <button onclick="addToCart('Cola')">In winkelmand</button></li>
+            <li>Fanta - €2,00 <button onclick="addToCart('Fanta')">In winkelmand</button></li>
+            <li>Koffie - €1,80 <button onclick="addToCart('Koffie')">In winkelmand</button></li>
+        </ul>
+
+        <h2>Snacks</h2>
+        <ul>
+            <li>Frikadel - €1,50 <button onclick="addToCart('Frikadel')">In winkelmand</button></li>
+            <li>Kroket - €1,50 <button onclick="addToCart('Kroket')">In winkelmand</button></li>
+            <li>Kaassoufflé - €1,80 <button onclick="addToCart('Kaassoufflé')">In winkelmand</button></li>
+        </ul>
+
+        
+    </div>
+</body>
+</html>
