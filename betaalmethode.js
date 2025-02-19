@@ -23,3 +23,6 @@ app.post("/create-payment-intent", async (req, res) => {
 });
 
 app.listen(3000, () => console.log("Server draait op poort 3000"));
+function goBack() {
+  window.history.back();
+}
