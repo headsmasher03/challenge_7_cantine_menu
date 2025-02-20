@@ -1,5 +1,5 @@
-// Simulating a shopping cart stored in localStorage
-let cart = JSON.parse(localStorage.getItem('cart')) || [
+// Simulating a shopping cart with an array of items
+let cart = [
     { name: 'Product 1', price: 20 },
     { name: 'Product 2', price: 15 },
     { name: 'Product 3', price: 30 }
@@ -19,7 +19,6 @@ function displayCartItems() {
 // Function to clear the cart
 function clearCart() {
     cart = []; // Empty the cart array
-    localStorage.removeItem('cart'); // Clear the cart from localStorage
     displayCartItems(); // Update the UI with an empty cart
 }
 
@@ -33,7 +32,6 @@ function goToBetaalmethode() {
     if (cart.length === 0) {
         alert("Je winkelmand is leeg! Voeg producten toe om te betalen.");
     } else {
-        localStorage.setItem('cart', JSON.stringify(cart)); // Save the cart to localStorage
         window.location.href = "betaalmethode.html"; // Redirect to the payment method page
     }
 }
