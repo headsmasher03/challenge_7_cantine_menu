@@ -1,8 +1,12 @@
+/* Base styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
 }
+
+/* Container */
 .container {
     max-width: 600px;
     margin: 20px auto;
@@ -10,21 +14,42 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out;
 }
+
+/* List */
 ul {
     list-style: none;
     padding: 0;
 }
+
 li {
     padding: 8px;
     border-bottom: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    opacity: 0;
+    animation: fadeInList 0.5s ease-in-out forwards;
 }
+
+li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
 li:last-child {
     border-bottom: none;
 }
+
+/* Button */
 button {
     background-color: #dc3545;
     color: white;
@@ -32,13 +57,48 @@ button {
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
+    transition: transform 0.2s ease;
 }
+
 button:hover {
     background-color: #c82333;
+    transform: scale(1.1);
 }
+
 .adjust-btn {
     background-color: #007bff;
 }
+
 .adjust-btn:hover {
     background-color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInList {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
