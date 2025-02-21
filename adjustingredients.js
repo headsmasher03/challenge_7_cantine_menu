@@ -51,9 +51,9 @@ function adjustIngredients(item) {
     window.location.href = 'ingredienten.html?item=' + encodeURIComponent(item);
 }
 
-function addToCart(item) {
+function addToCart(item, price) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push({ product: item, ingredients: [] });
+    cart.push({ name: item, price: price });
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(item + " is toegevoegd aan je winkelmand!");
 }
