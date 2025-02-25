@@ -7,93 +7,24 @@
     <link rel="stylesheet" href="hoofdpagina.css" />
   </head>
   <body>
-    <button onclick="window.location.href='winkelmand.html'">
-      Ga naar winkelmand
-    </button>
 
-    <div class="menu-container">
-      <h1>School Kantine Menu</h1>
 
-      <h2>Eten</h2>
-      <ul>
-        <li>
-          Broodje Hete Kip - €2,00
-          <button onclick="adjustIngredients('Broodje Hete Kip')">
-            Pas aan
-          </button>
-          <button onclick="addToCart('Broodje Hete Kip', 2.00)">
-            In winkelmand
-          </button>
-        </li>
-        <li>
-          Panini BBQ Kip - €2,50
-          <button onclick="adjustIngredients('Panini BBQ Kip')">Pas aan</button>
-          <button onclick="addToCart('Panini BBQ Kip', 2.50)">
-            In winkelmand
-          </button>
-        </li>
-        <li>
-          Tomatensoep - €1,50
-          <button onclick="adjustIngredients('Tomatensoep')">Pas aan</button>
-          <button onclick="addToCart('Tomatensoep', 1.50)">
-            In winkelmand
-          </button>
-        </li>
-        <li>
-          stokbrood kruidenboter - €3,00
-          <button onclick="addToCart('stokbrood kruidenboter', 3.00)">
-            In winkelmand
-          </button>
-        </li>
-        <li>
-          panini hamkaas - €2,50
-          <button onclick="adjustIngredients('panini hamkaas')">Pas aan</button
-          ><button onclick="addToCart('panini hamkaas', 2.50)">
-            In winkelmand
-          </button>
-        </li>
-        <li>
-          panini kip pesto - €3,00
-          <button onclick="addToCart('panini kip pesto', 3.00)">
-            In winkelmand
-          </button>
-        </li>
-      </ul>
+    <div class="container">
+      <div class="menu">
+          <h2>Producten</h2>
+          <button class="add-item" data-name="broodje kebab" data-price="2.50">broodje kebab (€2,50)</button>
+          <button class="add-item" data-name="Product 2" data-price="20">Product 2 (€20)</button>
+          <button class="add-item" data-name="Product 3" data-price="15">Product 3 (€15)</button>
+      </div>
 
-      <h2>Drankjes</h2>
-      <ul>
-        <li>
-          Cola - €2,00
-          <button onclick="addToCart('Cola', 2.00)">In winkelmand</button>
-        </li>
-        <li>
-          Fanta - €2,00
-          <button onclick="addToCart('Fanta', 2.00)">In winkelmand</button>
-        </li>
-        <li>
-          Koffie - €1,80
-          <button onclick="addToCart('Koffie', 1.80)">In winkelmand</button>
-        </li>
-      </ul>
+      <div class="sidebar">
+          <h2>Winkelwagen</h2>
+          <ul id="cart-list"></ul>
+          <p><strong>Totaal: €<span id="total-price">0</span></strong></p>
+          <button id="clear-cart">Leeg winkelwagen</button>
+      </div>
+  </div>
 
-      <h2>Snacks</h2>
-      <ul>
-        <li>
-          Frikadel - €1,50
-          <button onclick="addToCart('Frikadel', 1.50)">In winkelmand</button>
-        </li>
-        <li>
-          Kroket - €1,50
-          <button onclick="addToCart('Kroket', 1.50)">In winkelmand</button>
-        </li>
-        <li>
-          Kaassoufflé - €1,80
-          <button onclick="addToCart('Kaassoufflé', 1.80)">
-            In winkelmand
-          </button>
-        </li>
-      </ul>
-    </div>
 
     <script src="adjustingredients.js"></script>
     <script src="script.js"></script>
