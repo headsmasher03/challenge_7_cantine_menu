@@ -4,29 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>School Kantine Menu</title>
-    <link rel="stylesheet" href="hoofdpagina.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
 
-
+<section id="broodjes">
     <div class="container">
       <div class="menu">
-          <h2>Producten</h2>
+          <h2>broodjes</h2>
           <button class="add-item" data-name="broodje kebab" data-price="2.50">broodje kebab (€2,50)</button>
-          <button class="add-item" data-name="Product 2" data-price="20">Product 2 (€20)</button>
-          <button class="add-item" data-name="Product 3" data-price="15">Product 3 (€15)</button>
+          <button class="add-item" data-name="Panini BBQ kip" data-price="2.50">Panini BBQ kip (€2,50)</button>
+          <button class="add-item" data-name="Panini ham&kaas" data-price="2.50">Panini ham&kaas (€2,50)</button>
       </div>
+</section>
+
+
+<section id="drankjes">
+    <div class="container">
+      <div class="menu">
+          <h2>drankjes</h2>
+          <button class="add-item" data-name="CocaCola" data-price="2.50">CocaCola (€2,50)</button>
+          <button class="add-item" data-name="Fanta" data-price="2.50">Fanta (€2,50)</button>
+          <button class="add-item" data-name="WaterBLauw" data-price="1.50">WaterBlauw (€1,50)</button>
+      </div>
+</section>
+
+<section id="snack">
+  <div class="container">
+    <div class="menu">
+        <h2>snacks</h2>
+        <button class="add-item" data-name="Frikadel" data-price="1.50">Frikadel (€2,50)</button>
+        <button class="add-item" data-name="Mexicano" data-price="1.50">Mexicano (€2,50)</button>
+        <button class="add-item" data-name="Kaassoufle" data-price="1.50">Kaassoufle (€1,50)</button>
+    </div>
+</section>
+
+<a href="hoofdpagina.html">
+  <button> ga terug </button>
+</a>
 
       <div class="sidebar">
           <h2>Winkelwagen</h2>
           <ul id="cart-list"></ul>
           <p><strong>Totaal: €<span id="total-price">0</span></strong></p>
-          <button id="clear-cart">Leeg winkelwagen</button>
+          <button class="knop" id="clear-cart">Leeg winkelwagen</button>
+          <a href="betalen.html"><button class="afrekenen">Afrekenen</button></a>
       </div>
   </div>
 
-
-    <script src="adjustingredients.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

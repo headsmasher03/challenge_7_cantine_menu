@@ -1,5 +1,13 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
 }
 
 .container2 {
@@ -7,7 +15,10 @@ body {
     flex-direction: column;
 }
 
-
+.menu {
+    flex: 1;
+    padding: 20px;
+}
 
 .sidebar {
     width: 250px;
@@ -24,7 +35,7 @@ button {
     display: block;
     margin: 10px 0;
     padding: 10px;
-    width: 10%;
+    width: 100%;
     background: #007bff;
     color: white;
     border: none;
@@ -33,4 +44,26 @@ button {
 
 button:hover {
     background: #0056b3;
+}
+
+#clear-cart {
+    background: #dc3545;
+}
+
+#clear-cart:hover {
+    background: #a71d2a;
+}
+
+.afrekenen {
+    background: #00b637;
+}
+
+.afrekenen:hover {
+    background: #008c2b;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }
